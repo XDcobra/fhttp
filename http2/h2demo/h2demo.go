@@ -28,7 +28,7 @@ import (
 	tls "gitlab.com/yawning/utls.git"
 
 	"cloud.google.com/go/storage"
-	"github.com/Danny-Dasilva/fhttp/http2"
+	"github.com/XDcobra/fhttp/http2"
 	"go4.org/syncutil/singleflight"
 	"golang.org/x/build/autocertcache"
 	"golang.org/x/crypto/acme/autocert"

@@ -18,7 +18,7 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	"github.com/Danny-Dasilva/fhttp/internal"
+	"github.com/XDcobra/fhttp/internal"
 )
 
 // Issue 15446: incorrect wrapping of errors when server closes an idle connection.

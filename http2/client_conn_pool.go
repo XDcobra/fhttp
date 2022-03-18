@@ -11,7 +11,7 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
+	http "github.com/XDcobra/fhttp"
 )
 
 // ClientConnPool manages a pool of HTTP/2 client connections.

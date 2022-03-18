@@ -37,11 +37,11 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	. "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptest"
-	"github.com/Danny-Dasilva/fhttp/httputil"
-	"github.com/Danny-Dasilva/fhttp/internal"
-	"github.com/Danny-Dasilva/fhttp/internal/testenv"
+	. "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptest"
+	"github.com/XDcobra/fhttp/httputil"
+	"github.com/XDcobra/fhttp/internal"
+	"github.com/XDcobra/fhttp/internal/testenv"
 )
 
 type dummyAddr string

@@ -13,7 +13,7 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
+	http "github.com/XDcobra/fhttp"
 )
 
 // NewRequest returns a new incoming server Request, suitable

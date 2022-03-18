@@ -19,8 +19,8 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/internal"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/internal"
 )
 
 // A Server is an HTTP server listening on a system-chosen port on the

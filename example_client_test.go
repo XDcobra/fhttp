@@ -13,8 +13,8 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/http2"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/http2"
 )
 
 // Basic http test with Header Order + enable push

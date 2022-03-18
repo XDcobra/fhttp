@@ -2,8 +2,8 @@ package http2
 
 import (
 	"bytes"
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptrace"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptrace"
 	"log"
 	"strings"
 	"testing"

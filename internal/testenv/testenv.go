@@ -22,7 +22,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/Danny-Dasilva/fhttp/internal/cfg"
+	"github.com/XDcobra/fhttp/internal/cfg"
 )
 
 // Builder reports the name of the builder running this test

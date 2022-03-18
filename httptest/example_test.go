@@ -9,8 +9,8 @@ import (
 	"io"
 	"log"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptest"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptest"
 )
 
 func ExampleResponseRecorder() {

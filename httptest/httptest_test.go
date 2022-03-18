@@ -13,7 +13,7 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
+	http "github.com/XDcobra/fhttp"
 )
 
 func TestNewRequest(t *testing.T) {

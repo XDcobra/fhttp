@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptest"
-	"github.com/Danny-Dasilva/fhttp/internal/profile"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptest"
+	"github.com/XDcobra/fhttp/internal/profile"
 )
 
 // TestDescriptions checks that the profile names under runtime/pprof package

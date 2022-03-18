@@ -8,7 +8,7 @@ import (
 	"errors"
 	"net/url"
 
-	http "github.com/Danny-Dasilva/fhttp"
+	http "github.com/XDcobra/fhttp"
 )
 
 var (

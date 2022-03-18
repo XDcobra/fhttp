@@ -29,10 +29,10 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptrace"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptrace"
 
-	"github.com/Danny-Dasilva/fhttp/http2/hpack"
+	"github.com/XDcobra/fhttp/http2/hpack"
 	"golang.org/x/net/http/httpguts"
 	"golang.org/x/net/idna"
 )

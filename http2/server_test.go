@@ -29,8 +29,8 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptest"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptest"
 
 	"golang.org/x/net/http2/hpack"
 )

@@ -36,8 +36,8 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	"github.com/Danny-Dasilva/fhttp/http2"
-	"github.com/Danny-Dasilva/fhttp/http2/hpack"
+	"github.com/XDcobra/fhttp/http2"
+	"github.com/XDcobra/fhttp/http2/hpack"
 	"golang.org/x/term"
 )
 

@@ -29,9 +29,9 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	. "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/httptest"
-	"github.com/Danny-Dasilva/fhttp/httputil"
+	. "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/httptest"
+	"github.com/XDcobra/fhttp/httputil"
 )
 
 type clientServerTest struct {

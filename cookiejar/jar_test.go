@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	http "github.com/Danny-Dasilva/fhttp"
+	http "github.com/XDcobra/fhttp"
 )
 
 // tNow is the synthetic current time used as now during testing.

@@ -26,9 +26,9 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	. "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/cookiejar"
-	"github.com/Danny-Dasilva/fhttp/httptest"
+	. "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/cookiejar"
+	"github.com/XDcobra/fhttp/httptest"
 )
 
 var robotsTxtHandler = HandlerFunc(func(w ResponseWriter, r *Request) {

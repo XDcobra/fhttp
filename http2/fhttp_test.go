@@ -12,13 +12,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Danny-Dasilva/fhttp/cookiejar"
-	"github.com/Danny-Dasilva/fhttp/httptest"
+	"github.com/XDcobra/fhttp/cookiejar"
+	"github.com/XDcobra/fhttp/httptest"
 	tls "gitlab.com/yawning/utls.git"
 	"golang.org/x/net/publicsuffix"
 
-	http "github.com/Danny-Dasilva/fhttp"
-	"github.com/Danny-Dasilva/fhttp/http2"
+	http "github.com/XDcobra/fhttp"
+	"github.com/XDcobra/fhttp/http2"
 )
 
 // Tests if connection settings are written correctly

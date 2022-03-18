@@ -26,7 +26,7 @@ import (
 
 	tls "gitlab.com/yawning/utls.git"
 
-	"github.com/Danny-Dasilva/fhttp/httptrace"
+	"github.com/XDcobra/fhttp/httptrace"
 
 	"golang.org/x/net/idna"
 )
