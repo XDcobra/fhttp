@@ -148,6 +148,7 @@ type Transport struct {
 	Settings          []Setting
 	InitialWindowSize uint32 // if nil, will use global initialWindowSize
 	HeaderTableSize   uint32 // if nil, will use global initialHeaderTableSize
+	TransportConnFlow uint32 // if nil, will use global transportDefaultConnFlow
 }
 
 func (t *Transport) maxHeaderListSize() uint32 {
@@ -301,6 +302,7 @@ type ClientConn struct {
 	maxConcurrentStreams  uint32
 	peerMaxHeaderListSize uint64
 	initialWindowSize     uint32
+	transportConnFlow     uint32
 
 	hbuf    bytes.Buffer // HPACK encoder writes into this
 	henc    *hpack.Encoder
@@ -738,11 +740,6 @@ func (t *Transport) newClientConn(c net.Conn, addr string, singleUse bool) (*Cli
 	initialSettings := []Setting{}
 
 	var pushEnabled uint32
-	if t.PushHandler != nil {
-		pushEnabled = 1
-	}
-	initialSettings = append(initialSettings, Setting{ID: SettingEnablePush, Val: pushEnabled})
-
 	setMaxHeader := false
 	if t.Settings != nil {
 		for _, setting := range t.Settings {
@@ -751,6 +748,15 @@ func (t *Transport) newClientConn(c net.Conn, addr string, singleUse bool) (*Cli
 			}
 			if setting.ID == SettingHeaderTableSize || setting.ID == SettingInitialWindowSize {
 				return nil, errSettingsIncludeIllegalSettings
+			}
+			if setting.ID == SettingEnablePush {
+				if t.PushHandler != nil && setting.Val == 1 {
+					pushEnabled = 1
+				} else {
+					pushEnabled = 0
+				}
+				initialSettings = append(initialSettings, Setting{ID: SettingEnablePush, Val: pushEnabled})
+				continue
 			}
 			initialSettings = append(initialSettings, setting)
 		}
@@ -768,11 +774,17 @@ func (t *Transport) newClientConn(c net.Conn, addr string, singleUse bool) (*Cli
 	if max := t.maxHeaderListSize(); max != 0 && !setMaxHeader {
 		initialSettings = append(initialSettings, Setting{ID: SettingMaxHeaderListSize, Val: max})
 	}
+	var selectedTransportConnFlow uint32
+	if t.TransportConnFlow != 0 {
+		selectedTransportConnFlow = t.TransportConnFlow
+	} else {
+		selectedTransportConnFlow = transportDefaultConnFlow
+	}
 
 	cc.bw.Write(clientPreface)
 	cc.fr.WriteSettings(initialSettings...)
-	cc.fr.WriteWindowUpdate(0, transportDefaultConnFlow)
-	cc.inflow.add(transportDefaultConnFlow + initialWindowSize)
+	cc.fr.WriteWindowUpdate(0, selectedTransportConnFlow)
+	cc.inflow.add(int32(selectedTransportConnFlow + initialWindowSize))
 	cc.bw.Flush()
 	if cc.werr != nil {
 		cc.Close()

@@ -156,6 +156,7 @@ const (
 	SettingInitialWindowSize    SettingID = 0x4
 	SettingMaxFrameSize         SettingID = 0x5
 	SettingMaxHeaderListSize    SettingID = 0x6
+	SettingTransportConnFlow    SettingID = 0x7
 )
 
 var settingName = map[SettingID]string{
